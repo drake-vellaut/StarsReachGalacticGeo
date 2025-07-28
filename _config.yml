@@ -23,7 +23,7 @@ title: Galactic Geographic - Stars Reach MMORPG
 description: >- # this means to ignore newlines until "baseurl:"
   This guide is created to help players with the everything Stars Reach related.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://drake-vellaut.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://galacticgeographic.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GUNC_StarsReach
 #github_username:  jekyll
 
