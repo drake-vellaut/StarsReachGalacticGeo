@@ -82,9 +82,10 @@ header p {
   color: #b0b0b0;
 }
 
+/* Image Container (unchanged, handles aspect ratio and loading stability) */
 .image-container {
   width: 100%; /* Full-width by default; adjust if needed */
-  aspect-ratio: 4 / 3; 
+  aspect-ratio: 4 / 3; /* Reserves space to prevent layout shifts */
   margin-bottom: 1em; /* Space between images */
 }
 
@@ -101,6 +102,21 @@ header p {
   font-size: 0.875em;
   color: #666;
   margin-top: 0.5em;
+}
+
+/* Photo Grid (adjusted to work with nested image-containers) */
+.photo-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+  gap: 20px; /* Space between grid items */
+  margin: 30px 0;
+}
+
+/* Move image-specific styles here to target nested imgs */
+.photo-grid-4 .image-container img {
+  border-radius: 4px;
+  border: 1px solid rgba(102,240,230,0.3);
+  box-shadow: 0 0 8px rgba(102,240,230,0.4);
 }
     
     /* Navigation Menu (shared by index and article pages) */
@@ -249,19 +265,7 @@ header p {
       padding-left: 20px;
     }
 
-.photo-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin: 30px 0;
-}
 
-.photo-grid-4 img {
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid rgba(102,240,230,0.3);
-  box-shadow: 0 0 8px rgba(102,240,230,0.4);
-}
 
 .article-content section ul {
  margin-left: 25px;
