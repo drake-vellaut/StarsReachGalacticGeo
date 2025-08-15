@@ -92,7 +92,7 @@ header p {
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Fills the box; use 'contain' if you prefer no cropping */
+  object-fit: contain; /* Fills the box; use 'contain' if you prefer no cropping */
   display: block; /* Removes any inline spacing issues */
 }
 
@@ -115,7 +115,7 @@ header p {
 
 /* Move image-specific styles here to target nested imgs */
 .photo-grid-4 .image-container img {
-  max-width: 50%;
+  max-width: 100%;
   border-radius: 4px;
   border: 1px solid rgba(102,240,230,0.3);
   box-shadow: 0 0 8px rgba(102,240,230,0.4);
