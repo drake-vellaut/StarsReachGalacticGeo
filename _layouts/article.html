@@ -722,20 +722,7 @@ header p {
     });
   });
 
-  // Listen for hash changes (TOC clicks)
-window.addEventListener('hashchange', function() {
-  const target = document.querySelector(window.location.hash);
-  if (target) {
-    // Wait for images below the anchor to load, then scroll
-    const images = target.querySelectorAll('img[loading="lazy"]');
-    Promise.all(Array.from(images).map(img => {
-      if (img.complete) return Promise.resolve();
-      return new Promise(resolve => img.addEventListener('load', resolve));
-    })).then(() => {
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-});
+
 </script>
 
 
