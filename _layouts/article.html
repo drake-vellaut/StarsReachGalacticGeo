@@ -81,6 +81,27 @@ header p {
   margin-top: 10px;
   color: #b0b0b0;
 }
+
+.image-container {
+  width: 100%; /* Full-width by default; adjust if needed */
+  aspect-ratio: 4 / 3; 
+  margin-bottom: 1em; /* Space between images */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills the box; use 'contain' if you prefer no cropping */
+  display: block; /* Removes any inline spacing issues */
+}
+
+.image-container figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.875em;
+  color: #666;
+  margin-top: 0.5em;
+}
     
     /* Navigation Menu (shared by index and article pages) */
     nav {
