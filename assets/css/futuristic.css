@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+input[type="search"],
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #4dd0c3; /* Light teal */
+  box-shadow: 0 0 0 2px rgba(77, 208, 195, 0.4); 
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
