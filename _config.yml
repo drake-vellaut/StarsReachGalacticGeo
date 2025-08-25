@@ -31,6 +31,7 @@ twitter_username: GUNC_StarsReach
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
 
 header_pages:
   - index.html
@@ -39,8 +40,37 @@ page_paths:
   - title: "Home"
     url: "/"
 
-paginate: 5
-paginate_path: "/page:num"
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: /page/:num/
+  title: ":title - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+autopages:
+  enabled: true
+  tags:
+    layouts:
+      - tag_page  # Your layout (now without .html in filename)
+    title: "Posts tagged with :tag"
+    permalink: /tag/:tag/
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+
+show_tags: true
+
+safe: false
+
+
+include:
+  - search.json
 
 # Exclude from processing.
 # The following items will not be processed, by default.
