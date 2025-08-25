@@ -64,7 +64,7 @@ nav a {
   transition: color 0.3s ease;
 }
 nav a:hover {
-  color: #e080e8;
+  color: #4dd0c3;
 }
 
 /* Tag Filter */
@@ -286,7 +286,7 @@ blockquote {
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
-  border-color: #e080e8;
+  border-color: #4dd0c3;
   box-shadow: 0 0 5px rgba(224, 128, 232, 0.6);
   outline: none;
 }
