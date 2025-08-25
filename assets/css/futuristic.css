@@ -19,20 +19,18 @@ header {
   padding: 20px 0;
   margin-bottom: 30px;
 }
-header h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.8em;
-  color: #66f0e6;
-  text-shadow: 0px 0px 8px rgba(0, 255, 255, 0.7);
-}
-
+header h1,
 header h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2.2em;
   color: #66f0e6;
   text-shadow: 0px 0px 8px rgba(0, 255, 255, 0.7);
 }
-
+header h1 {
+  font-size: 2.8em;
+}
+header h2 {
+  font-size: 2.2em;
+}
 header p {
   font-size: 1.1em;
   margin-top: 10px;
@@ -59,12 +57,77 @@ nav a:hover {
   color: #e080e8;
 }
 
+/* Tag Filter */
+.tag-filter {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, rgba(102, 240, 230, 0.1), rgba(102, 240, 230, 0.5), rgba(102, 240, 230, 0.1)) 1;
+  box-shadow: 0 0 10px rgba(102, 240, 230, 0.3);
+}
+.tag-filter h3 {
+  font-size: 1.2em;
+  color: #66f0e6;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag-button {
+  background: rgba(102, 240, 230, 0.15);
+  border: 1px solid #66f0e6;
+  color: #66f0e6;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9em;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.tag-button:hover {
+  background: rgba(102, 240, 230, 0.3);
+  color: #e0e0e0;
+  box-shadow: 0 0 5px rgba(102, 240, 230, 0.5);
+}
+.tag-button.active {
+  background: #66f0e6;
+  color: #090a0f;
+  box-shadow: 0 0 8px rgba(102, 240, 230, 0.7);
+}
+.no-tags {
+  color: #b0b0b0;
+  font-size: 0.9em;
+}
+.post-tags {
+  margin-bottom: 10px;
+}
+.tag {
+  display: inline-block;
+  background: rgba(102, 240, 230, 0.1);
+  border: 1px solid #66f0e6;
+  color: #66f0e6;
+  font-size: 0.85em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.tag.no-tags {
+  color: #b0b0b0;
+  border-color: #b0b0b0;
+}
+
 /* Layout Container (for Index Page) */
 .container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
-  /* Use a dark, translucent background to match the article pages */
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border-radius: 8px;
@@ -72,15 +135,14 @@ nav a:hover {
 
 /* Main Content Section */
 .main-content {
-  background: rgba(102,240,230,0.05);
+  background: rgba(102, 240, 230, 0.05);
   padding: 20px;
   border-radius: 8px;
 }
-
 .article {
   margin-bottom: 40px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(102,240,230,0.2);
+  border-bottom: 1px solid rgba(102, 240, 230, 0.2);
 }
 .article h2 {
   font-family: 'Orbitron', sans-serif;
@@ -105,27 +167,25 @@ nav a:hover {
 
 /* Sidebar Section */
 .sidebar {
-  background: rgba(102,240,230,0.05);
+  background: rgba(102, 240, 230, 0.05);
   padding: 20px;
   border-radius: 8px;
   overflow-y: auto;
 }
-.sidebar h3 {
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  color: #66f0e6;
-  margin-bottom: 15px;
-}
-
+.sidebar h3,
 .sidebar a {
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
-  font-size: 1em;
   color: #66f0e6;
+}
+.sidebar h3 {
+  font-size: 1.5em;
   margin-bottom: 15px;
 }
-
+.sidebar a {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
 .sidebar img {
   width: 100%;
   justify-content: center;
@@ -134,12 +194,12 @@ nav a:hover {
 /* Video Embed */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   border-radius: 4px;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 10px rgba(102,240,230,0.7);
+  box-shadow: 0px 0px 10px rgba(102, 240, 230, 0.7);
 }
 .video-container iframe {
   position: absolute;
@@ -155,53 +215,110 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 30px;
-  border-top: 1px solid rgba(102,240,230,0.1);
+  border-top: 1px solid rgba(102, 240, 230, 0.1);
   font-size: 0.9em;
   color: #aaa;
 }
 
 blockquote {
-	margin-left: 15px;
+  margin-left: 15px;
 }
 
+/* Pagination */
 .pagination {
   text-align: center;
   margin: 20px 0;
 }
-
-.pagination a, .pagination span {
+.pagination a,
+.pagination span {
   display: inline-block;
   padding: 8px 12px;
   margin: 0 5px;
   color: #66f0e6;
   text-decoration: none;
-  border: 1px solid rgba(102, 240, 102, 0.3);
+  border: 1px solid rgba(102, 240, 230, 0.3);
   border-radius: 4px;
   transition: background 0.3s, color 0.3s;
 }
-
 .pagination a:hover {
-  background: rgba(102, 240, 102, 0.2);
+  background: rgba(102, 240, 230, 0.2);
   color: #e0e0e0;
 }
-
 .pagination .current {
-  background: #66fe66;
+  background: #66f0e6;
   color: #090a0f;
 }
-
 .pagination .disabled {
   color: #b0b0b0;
-  border-color: rgba(102, 240, 102, 0.1);
+  border-color: rgba(102, 240, 230, 0.1);
 }
 
+/* Search Form */
+#search-form {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(102, 240, 230, 0.3);
+  box-shadow: 0 0 10px rgba(102, 240, 230, 0.2);
+}
+#search-input {
+  width: 70%;
+  padding: 0.5rem;
+  background: rgba(9, 10, 15, 0.8);
+  color: #e0e0e0;
+  border: 1px solid #66f0e6;
+  border-radius: 4px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-color: #e080e8;
+  box-shadow: 0 0 5px rgba(224, 128, 232, 0.6);
+  outline: none;
+}
+
+#search-form button {
+  padding: 0.5rem 1rem;
+  background: rgba(102, 240, 230, 0.2);
+  color: #66f0e6;
+  border: 1px solid #66f0e6;
+  border-radius: 4px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#search-form button:hover {
+  background: #66f0e6;
+  color: #090a0f;
+  box-shadow: 0 0 8px rgba(102, 240, 230, 0.7);
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
   }
+
   nav {
     flex-direction: column;
+  }
+
+  .tag-list {
+    justify-content: center;
+  }
+
+  #search-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #search-input {
+    width: 100%;
   }
 }
